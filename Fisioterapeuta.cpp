@@ -22,12 +22,7 @@ void Fisioterapeuta::removerHorarioLivre(int hora, int minuto){
             }
     }
 }
-void Fisioterapeuta::mostrarFisioPorHorario()const{
-    cout << "Horários livres para: " << nome << endl;
-    for (const auto& horario : horarios_livres){
-        cout << horario.first << " " << horario.second<< endl;
-    }
-}
+
 void Fisioterapeuta:: adicionarpaciente(const string& nome_paciente){
     pacientes.push_back(nome_paciente);
 }
@@ -36,4 +31,8 @@ void Fisioterapeuta::mostrarpacientes() const{
     for (const auto& paciente : pacientes){
         cout<<paciente<< endl;
     }
+}
+
+vector<pair<int, int>> Fisioterapeuta::getHorariosLivres() const {
+    return horarios_livres;
 }

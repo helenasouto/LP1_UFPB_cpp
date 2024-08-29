@@ -13,13 +13,16 @@ public:
     string getDRF() const;
     void adicionarHorarioLivre(int hora, int minuto);
     void removerHorarioLivre (int hora, int minuto);
-    void mostrarFisioPorHorario() const;
     void adicionarpaciente(const string& nome_paciente);
     void mostrarpacientes() const;
     vector <pair<int, int>> getHorariosLivres () const;
+    void cadastrar() const override;
+    
+protected:
+vector <pair<int, int>> horarios_livres;
+
 private:
     string drf;
-    vector <pair<int, int>> horarios_livres;
     vector <string>pacientes;
 };
 
