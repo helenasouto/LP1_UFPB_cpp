@@ -1,16 +1,15 @@
 #include "Pacote.h"
+#include <string>
+#include <iostream>
 
-Pacote::Pacote(int quantidadeAulas, double valorPorAula)
-    : quantidadeAulas(quantidadeAulas), valorPorAula(valorPorAula) {}
+using namespace std;
+
+Pacote::Pacote(int quantidadeAulas, double valorPorPacote) : quantidadeAulas(quantidadeAulas), valorPorPacote(valorPorPacote) {};
 
 int Pacote::getQuantidadeAulas() const {
      return quantidadeAulas; 
      }
 
-double Pacote::getValorPorAula() const {
-     return valorPorAula; 
-     }
-
-double Pacote::calcularValorTotal() const {
-     return quantidadeAulas * valorPorAula; 
+double Pacote::getValorPorPacote() const {
+     return valorPorPacote; 
      }

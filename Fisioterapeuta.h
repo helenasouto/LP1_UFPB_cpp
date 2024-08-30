@@ -17,6 +17,9 @@ public:
     void mostrarpacientes() const;
     vector <pair<int, int>> getHorariosLivres () const;
     void cadastrar() const override;
+
+    void atualizarDados(const string& nome, int hora, int minuto, int idade, const string& telefone) override;
+    void atualizarDRF(const string& novoDRF);
     
 protected:
 vector <pair<int, int>> horarios_livres;

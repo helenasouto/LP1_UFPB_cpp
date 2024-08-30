@@ -18,6 +18,8 @@ public:
     int getIdade() const;
     string getTelefone() const;
 
+    virtual void atualizarDados (const string& nome, int hora, int minuto, int idade, const string& telefone)= 0;
+
 protected:
     string nome;
     int hora;
