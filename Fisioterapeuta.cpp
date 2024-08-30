@@ -36,3 +36,15 @@ void Fisioterapeuta::mostrarpacientes() const{
 vector<pair<int, int>> Fisioterapeuta::getHorariosLivres() const {
     return horarios_livres;
 }
+
+void Fisioterapeuta::atualizarDados(const string& nome, int hora, int minuto, int idade, const string& telefone) {
+    this->nome = nome;
+    this->hora = hora;
+    this->minuto = minuto;
+    this->idade = idade;
+    this->telefone = telefone;
+}
+
+void Fisioterapeuta::atualizarDRF(const string& novoDRF) {
+    this->drf = novoDRF;
+}

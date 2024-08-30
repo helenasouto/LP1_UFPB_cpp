@@ -8,10 +8,7 @@
 using namespace std;
 
 Paciente::Paciente(const string& nome, int hora, int minuto, const string& cpf, int idade, const string& telefone, bool pagamento, const string& responsavel, const string& tpacote)
-: Pessoa(nome, hora, minuto, cpf, idade, telefone) {
-    this->pagamento = pagamento;
-    this->responsavel = responsavel;
-    this->tpacote = tpacote; 
+: Pessoa(nome, hora, minuto, cpf, idade, telefone), pagamento(pagamento), responsavel(responsavel), tpacote(tpacote) {
 }
 
 string Paciente::getResponsavel() const {
@@ -29,6 +26,27 @@ bool Paciente::verificarpagamento() const {
 void Paciente::setPagamento(bool pagamento) {
     this->pagamento = pagamento;
 }
+
+void Paciente::atualizarDados(const string& nome, int hora, int minuto, int idade, const string& telefone) {
+    this->nome = nome;
+    this->hora = hora;
+    this->minuto = minuto;
+    this->idade = idade;
+    this->telefone = telefone;
+}
+
+void Paciente::atualizarResponsavel(const string& novoResponsavel) {
+    this->responsavel = novoResponsavel;
+}
+
+void Paciente::atualizarTipoPacote(const string& novoTipoPacote) {
+    this->tpacote = novoTipoPacote;
+}
+
+void Paciente::atualizarPagamento(bool novoPagamento) {
+    this->pagamento = novoPagamento;
+}
+
 
 
 

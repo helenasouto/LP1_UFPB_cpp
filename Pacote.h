@@ -1,17 +1,20 @@
 #ifndef PACOTE_H
 #define PACOTE_H
 
-class Pacote {
+class Pacote
+{
+
 public:
-    Pacote(int quantidadeAulas, double valorPorAula);
-    
+
+    Pacote(int quantidadeAulas, double valorPorPacote);
+
     int getQuantidadeAulas() const;
-    double getValorPorAula() const;
-    double calcularValorTotal() const;
+    double getValorPorPacote() const;
 
 private:
     int quantidadeAulas;
-    double valorPorAula;
+    double valorPorPacote;
+
 };
 
 #endif
