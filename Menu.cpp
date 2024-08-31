@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -88,15 +89,15 @@ void Menu::cadastrarPaciente() {
     bool pagamento;
     
     cout << "=== Cadastrar Paciente ===" << endl;
-    cout << "Nome: "; cin >> nome;
-    cout << "CPF: "; cin >> cpf;
-    cout << "Telefone: "; cin >> telefone;
-    cout << "Idade: "; cin >> idade;
-    cout << "Responsável: "; cin >> responsavel;
-    cout << "Tipo de Pacote: "; cin >> tipoPacote;
-    cout << "Pagamento (1 para pago, 0 para não): "; cin >> pagamento;
-    cout << "Hora: "; cin >> hora;
-    cout << "Minuto: "; cin >> minuto;
+    cout << "Nome: "; cin >> nome; cout << endl;
+    cout << "CPF: "; cin >> cpf; cout << endl; 
+    cout << "Telefone: "; cin >> telefone; cout << endl;
+    cout << "Idade: "; cin >> idade; cout << endl;
+    cout << "Responsável: "; cin >> responsavel; cout << endl;
+    cout << "Tipo de Pacote: "; cin >> tipoPacote; cout << endl;
+    cout << "Pagamento (1 para pago, 0 para não): "; cin >> pagamento; cout << endl;
+    cout << "Hora: "; cin >> hora; cout << endl;
+    cout << "Minuto: "; cin >> minuto; cout << endl;
 
     Paciente* paciente = new Paciente(nome, hora, minuto, cpf, idade, telefone, pagamento, responsavel, tipoPacote);
     Gerenciador.cadastrarpaciente(paciente);
@@ -138,7 +139,10 @@ void Menu::pesquisarFisioterapeuta() {
 }
 
 void Menu::mostrarPacientesPorHorario(){
+    int hora, minuto;
     cout << "=== Mostrar Pacientes por Horário ===" << endl;
+    cout <<"Hora: "; cin >> hora; cout << endl;
+    cout <<"Minuto: "; cin >> minuto; cout << endl;
     Gerenciador.mostrarPacientesPorHorario();
 }
 

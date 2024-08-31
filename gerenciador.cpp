@@ -58,7 +58,7 @@ void gerenciador::pesquisarFisioPorNome(const string& nome) const {
             return;
         }
     }
-    cout << "Fisio nao encontrado" << endl;
+    cout << "Fisioterapeuta nao encontrado" << endl;
 }
 
 void gerenciador::atualizarPessoa(const string& cpf, const string& novoNome, int novaHora, int novoMinuto, int novaIdade, const string& novoTelefone) {

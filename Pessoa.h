@@ -10,7 +10,6 @@ class Pessoa {
 public:
     Pessoa(const string& nome, int hora, int minuto,const string& cpf, int idade, const string& telefone);
     virtual ~Pessoa() {} 
-    virtual void cadastrar() const = 0; 
     string getNome() const;
     int getHora() const;
     int getMinuto() const;
@@ -27,7 +26,8 @@ protected:
     string cpf;
     int idade;
     string telefone;
-    vector<Pessoa> pessoas;
+    vector<Pessoa*> pessoas;
+    vector<Pessoa*> pessoaList;
 };
 
 #endif
