@@ -14,8 +14,6 @@ public:
     string getTipoPacote () const;
     bool verificarpagamento() const;
     void setPagamento(bool pagamento);
-    void cadastrar() const override;
-   
     void atualizarDados(const string& nome, int hora, int minuto, int idade, const string& telefone) override;
     void atualizarResponsavel(const string& novoResponsavel);
     void atualizarTipoPacote(const string& novoTipoPacote);

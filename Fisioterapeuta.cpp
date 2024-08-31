@@ -8,6 +8,17 @@ using namespace std;
 Fisioterapeuta::Fisioterapeuta(const string& nome, int hora, int minuto,const string& cpf, int idade, const string& telefone, const string& drf)
 : Pessoa (nome, hora, minuto, cpf, idade, telefone), drf(){}
 
+void Fisioterapeuta::atualizarFisioterapeuta(const string& cpf, const string& novoDRF) {
+    for (auto& fisioterapeuta : fisioList) {
+        if (fisioterapeuta.getCPF() == cpf) {
+            fisioterapeuta.atualizarDRF(novoDRF);
+            return;
+        }
+    }
+    
+    cout << "Fisioterapeuta não encontrado" << endl;
+}
+
 string Fisioterapeuta:: getDRF () const{
     return drf;
 }

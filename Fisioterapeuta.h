@@ -11,12 +11,12 @@ class Fisioterapeuta : public Pessoa
 public:
     Fisioterapeuta(const string& nome, int hora, int minuto,const string& cpf, int idade, const string& telefone, const string& drf);
     string getDRF() const;
+    void atualizarFisioterapeuta(const string& cpf, const string& novoDRF);
     void adicionarHorarioLivre(int hora, int minuto);
     void removerHorarioLivre (int hora, int minuto);
     void adicionarpaciente(const string& nome_paciente);
     void mostrarpacientes() const;
     vector <pair<int, int>> getHorariosLivres () const;
-    void cadastrar() const override;
 
     void atualizarDados(const string& nome, int hora, int minuto, int idade, const string& telefone) override;
     void atualizarDRF(const string& novoDRF);
@@ -27,6 +27,7 @@ vector <pair<int, int>> horarios_livres;
 private:
     string drf;
     vector <string>pacientes;
+    vector <Fisioterapeuta> fisioList;
 };
 
 #endif
